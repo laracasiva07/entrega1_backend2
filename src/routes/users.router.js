@@ -8,11 +8,11 @@ router.get("/", async(_, res) => {
 });
 
 router.get("/:id", async(_, res) => {
-    res.json(await UserModel.find())
+    res.json(await UserModel.findById(req.params.id));
 });
-88
+
 router.delete("/:id", async(_, res) => {
-    
+    res.json(await UserModel.deleteOne({_id: req.params.id}));
 });
 
 export default router

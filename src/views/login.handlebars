@@ -1,0 +1,30 @@
+<h1 class="text-center mb-4">Iniciar Sesión</h1>
+
+<form action="/api/session/login" method="POST" class="mx-auto" style="max-width: 400px;">
+  <div class="mb-3">
+    <label class="form-label">Email</label>
+    <input type="email" name="email" class="form-control" required />
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">Contraseña</label>
+    <input type="password" name="password" class="form-control" required />
+  </div>
+
+  <button type="submit" class="btn btn-primary w-100">Iniciar sesión</button>
+</form>
+
+<div class="text-center mt-3">
+  <p>¿No tenés cuenta? <a href="/register">Registrate acá</a></p>
+</div>
+
+<hr class="my-4"/>
+
+<h5 class="text-center">¿Olvidaste tu contraseña?</h5>
+<form action="/forgot-password" method="POST" class="mx-auto" style="max-width: 400px;">
+  <div class="mb-3">
+    <label class="form-label">Email para recuperar contraseña</label>
+    <input type="email" name="email" class="form-control" required />
+  </div>
+  <button type="submit" class="btn btn-outline-primary w-100">Enviar enlace de recuperación</button>
+</form>
